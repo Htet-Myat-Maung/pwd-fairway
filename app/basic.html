@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box1 {
+                position: relative;
+                width: 1000px;
+                height: 600px;
+                background: silver;
+                margin: 50px auto;
+            }
+            .box2 {
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                border-radius: 200px;
+                background: linear-gradient(45deg, green, darkblue);
+                width: 200px;
+                height: 200px;
+                transition: scale 0.5s;
+                animation: move 3s infinite alternate;
+            }
+            .box2:hover {
+                scale: 1.1;
+                cursor: pointer;
+            }
+            @keyframes move {
+                0% {
+                    top: 0;
+                    left: 0;
+                }
+                50% {
+                    top: 400px;
+                    left: 400px;
+                }
+                100% {
+                    top: 0;
+                    left: 800px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div class="box2"></div>
+            <!-- <div>
+                <span style="font-size: 30px">Name</span>
+            </div> -->
+        </div>
+    </body>
+</html>
